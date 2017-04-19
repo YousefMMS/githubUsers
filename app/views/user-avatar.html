@@ -1,0 +1,8 @@
+<div class="user-avatar row align-middle" ng-click="onSelected()">
+    <div class="column shrink">
+        <img ng-src="{{:: user.avatar_url + '&s=30'}}"/>
+    </div>
+    <div class="column">
+        <a ng-bind="user.login"></a>
+    </div>
+</div>

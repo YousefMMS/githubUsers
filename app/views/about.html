@@ -1,0 +1,17 @@
+<div class="about">
+
+    <div class="row align-center">
+        <div class="column shrink about-content">
+            <p ng-bind="'PARAGRAPH_1'|resource"></p>
+            <p ng-bind="'PARAGRAPH_2'|resource"></p>
+        </div>
+    </div>
+
+    <div class="row align-center">
+        <div class="column shrink">
+            <a class="button small go-home-button" ui-sref="home">
+                <span ng-if="!users.loadingUsers" ng-bind="'GO_HOME'|resource"></span>
+            </a>
+        </div>
+    </div>
+</div>

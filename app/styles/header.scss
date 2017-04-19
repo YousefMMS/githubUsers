@@ -1,0 +1,39 @@
+.app-header {
+    height: 100%;
+
+    .logo {
+        font-size: 40px;
+
+        i {
+            cursor: pointer;
+        }
+
+        i:hover {
+            color: #686868;
+        }
+    }
+
+    .title {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .menu-container {
+        .menu-item {
+            width: 90px;
+            height: 35px;
+            text-align: center;
+            background-color: #828282;
+            display: inline-block;
+            padding: 5px;
+            color: #fff;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        .menu-item.active {
+            background-color: #000000;
+        }
+    }
+}

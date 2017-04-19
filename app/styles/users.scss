@@ -1,0 +1,38 @@
+.users {
+    height: 100%;
+
+    .users-container {
+        overflow-x: auto;
+
+        .user-item {
+            cursor: pointer;
+
+            .jump-indicator {
+                visibility: hidden;
+                font-size: 25px;
+                color: #808080;
+            }
+        }
+
+        .user-item:hover {
+            background-color: aliceblue;
+
+            .jump-indicator {
+                visibility: visible;
+            }
+        }
+    }
+
+    .details-container {
+        height: 100%;
+    }
+
+    .load-more-container {
+        margin: 10px;
+
+        button {
+            margin: 0;
+            width: 130px;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.user-details {
+    height: 100%;
+
+    .loading {
+        height: 100%;
+
+        i {
+            font-size: 50px;
+        }
+    }
+
+    .user-info-container {
+        padding: 10px;
+
+        .image-container {
+            margin: 10px;
+            max-width: 230px;
+
+            img {
+                border-radius: 5px;
+            }
+        }
+
+        .user-name {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .user-login {
+            text-align: center;
+        }
+
+        .details {
+            .item {
+                font-size: 17px;
+                height: 35px;
+
+                .info-header {
+                    width: 70px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .bio-container {
+            margin-top: 10px;
+
+            .bio-header {
+                font-size: 24px;
+                color: #565656;
+            }
+        }
+    }
+}

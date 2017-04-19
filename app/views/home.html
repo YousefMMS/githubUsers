@@ -1,0 +1,25 @@
+<div class="home">
+    <div class="row align-center align-middle welcome-container">
+        <div class="column shrink">
+        <span ng-bind="'WELCOME_IN_HOME'|resource"></span>
+        </div>
+    </div>
+
+    <div class="row align-spaced tabs-container">
+        <div class="column shrink tab" ui-sref="home">
+            <div class="row align-center align-middle tab-content">
+                <span class="column shrink" ng-bind="'HOME'|resource"></span>
+            </div>
+        </div>
+        <div class="column shrink tab" ui-sref="about">
+            <div class="row align-center align-middle tab-content">
+                <span class="column shrink" ng-bind="'ABOUT'|resource"></span>
+            </div>
+        </div>
+        <div class="column shrink tab" ui-sref="users">
+            <div class="row align-center align-middle tab-content">
+                <span class="column shrink" ng-bind="'USERS'|resource"></span>
+            </div>
+        </div>
+    </div>
+</div>

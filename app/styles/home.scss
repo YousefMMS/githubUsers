@@ -1,0 +1,25 @@
+.home {
+    .welcome-container {
+        height: 120px;
+        font-size: 25px;
+    }
+
+    .tabs-container {
+        .tab {
+            border: solid 3px #5b5b5b;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            border-radius: 10px;
+
+            .tab-content {
+                height: 100%;
+                font-size: 20px;
+            }
+        }
+
+        .tab:hover {
+            background-color: #bababa;
+        }
+    }
+}

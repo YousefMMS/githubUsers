@@ -1,0 +1,25 @@
+<div class="app-header row align-middle">
+    <div class="column">
+        <div class="row">
+            <div class="column shrink logo">
+                <i class="fa fa-github"  ui-sref="home"></i>
+            </div>
+            <div class="column title">
+                <span ng-bind="'APP_NAME'|resource"></span>
+                <i class="fa fa-angle-right"></i>
+                <span update-page-title></span>
+            </div>
+        </div>
+    </div>
+    <div class="column shrink menu-container">
+        <a class="menu-item" ui-sref="home" ui-sref-active="active">
+            <span ng-bind="'HOME'|resource"></span>
+        </a>
+        <a class="menu-item" ui-sref="about" ui-sref-active="active">
+            <span ng-bind="'ABOUT'|resource"></span>
+        </a>
+        <a class="menu-item" ui-sref="users" ui-sref-active="active">
+            <span ng-bind="'USERS'|resource"></span>
+        </a>
+    </div>
+</div>

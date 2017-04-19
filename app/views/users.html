@@ -1,0 +1,29 @@
+<div class="row users">
+    <div class="column shrink users-container">
+        <div ng-repeat="user in users.users track by user.id" class="row user-item">
+            <div class="column">
+                <user-avatar user="user" on-selected="users.getUserDetails(user)"></user-avatar>
+            </div>
+            <div class="column shrink align-self-right jump-indicator">
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+        <div class="row align-center load-more-container" ng-if="!users.noMore">
+            <button class="button small"
+                    ng-click="users.getNextPage(users.users[users.users.length - 1])"
+                    ng-disabled="users.loadingUsers">
+
+                <span ng-if="!users.loadingUsers" ng-bind="'LOAD_MORE'|resource"></span>
+                <span ng-if="users.loadingUsers">
+                    <i class="fa fa-spinner fa-spin"></i>
+                    <span ng-bind="'LOADING'|resource"></span>
+                </span>
+            </button>
+        </div>
+
+        <div ng-if="users.noMore">
+            <span ng-bind="'NO_MORE'|resource"></span>
+        </div>
+    </div>
+    <div ui-view class="column details-container"></div>
+</div>

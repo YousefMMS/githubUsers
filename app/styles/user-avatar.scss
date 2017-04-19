@@ -1,0 +1,12 @@
+.user-avatar {
+    height: 40px;
+
+    img {
+        max-width: 30px;
+        border-radius: 5px;
+    }
+
+    > div {
+        /*padding:6px;*/
+    }
+}

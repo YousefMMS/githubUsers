@@ -1,0 +1,100 @@
+<div class="user-details">
+    <div ng-if="user.loading" class="loading row align-center align-middle">
+        <div class="column shrink">
+            <i class="fa fa-spinner fa-spin"></i>
+            <!--<span ng-bind="'Loading User Details'"></span>-->
+        </div>
+    </div>
+    <div ng-if="!user.loading" class="user-info-container">
+        <div class="row">
+            <div class="column shrink">
+                <div class="image-container">
+                    <img ng-src="{{:: user.userInfo.avatar_url + '&s=230'}}" />
+                </div>
+                <div class="user-name">
+                    <span ng-bind=":: user.userInfo.name" title="{{'USER_NAME'|resource}}"></span>
+                </div>
+                <div class="user-login">
+                    <span ng-bind=":: user.userInfo.login" title="{{'LOGIN_NAME'|resource}}"></span>
+                </div>
+            </div>
+
+            <div class="column details">
+                <div class="row align-middle item">
+                    <div class="column shrink info-header ">
+                        <i class="fa fa-envelope-o" title="{{'EMAIL'|resource}}"></i>
+                    </div>
+                    <div class="column">
+                        <a href="{{'mailto:' + user.userInfo.email}}" ng-bind=":: user.userInfo.email"></a>
+                    </div>
+                </div>
+
+                <div class="row align-middle item">
+                    <div class="column shrink info-header ">
+                        <i class="fa fa-map-marker" title="{{'LOCATION'|resource}}"></i>
+                    </div>
+                    <div class="column">
+                        <span ng-bind=":: user.userInfo.location"></span>
+                    </div>
+                </div>
+
+                <div class="row align-middle item">
+                    <div class="column shrink info-header">
+                        <i class="fa fa-clock-o" title="{{'JOINED'|resource}}"></i>
+                    </div>
+                    <div class="column">
+                        <span>Joined on</span>
+                        <span date-viewer=":: user.userInfo.created_at"></span>
+                    </div>
+                </div>
+
+                <div class="row align-middle item">
+                    <div class="column shrink info-header ">
+                        <i class="fa fa-link" title="{{'BLOG'|resource}}"></i>
+                    </div>
+                    <div class="column">
+                        <a href="{{user.userInfo.blog}}" target="_blank" ng-bind=":: user.userInfo.blog"> </a>
+                    </div>
+                </div>
+
+                <div class="row align-middle item">
+                    <div class="column shrink info-header ">
+                        <i class="fa fa-users" title="{{'COMPANY'|resource}}"></i>
+                    </div>
+                    <div class="column">
+                        <span ng-bind=":: user.userInfo.company ? user.userInfo.company : 'NO_COMPANY'|resource"></span>
+                    </div>
+                </div>
+
+                <div class="row align-middle item">
+                    <div class="column shrink info-header">
+                        <i class="fa fa-user" title="{{'FOLLOWERS'|resource}}"></i>
+                    </div>
+                    <div class="column">
+                        <span ng-bind=":: user.userInfo.followers"></span>
+                    </div>
+                </div>
+
+                <div class="row align-middle item">
+                    <div class="column shrink info-header ">
+                        <i class="fa fa-github-square" title="{{'REPOSITORIES'|resource}}"></i>
+                    </div>
+                    <div class="column">
+                        <span ng-bind=":: user.userInfo.public_repos"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row bio-container">
+            <div class="column shrink bio-header">
+                <span ng-bind="'BIO'|resource"></span>
+                <span>:</span>
+            </div>
+            <div class="column">
+                <p class="bio" ng-bind=":: user.userInfo.bio ? user.userInfo.bio : 'NO_BIO'|resource"></p>
+            </div>
+        </div>
+    </div>
+</div>
